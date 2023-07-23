@@ -1,12 +1,12 @@
 const fs= require('fs/promises');
 const path= require('path');
-import {fileURLToPath} from 'url';
-const __filename= fileURLToPath(import.meta.url);
+//import {fileURLToPath} from 'url';
+//const __filename= fileURLToPath(import.meta.url);
 
 class ProductManager{
     constructor(filename){
-        this.filename= filename;
-        this.filepath = path.join(__dirname, this.filename);
+        this.filename = filename;
+        this.filepath = path.join(__dirname, 'productos.json');
         this.products= []
         console.log(this.filepath);
     }
@@ -16,4 +16,4 @@ class ProductManager{
         return this.products
     }
 }
- module.exports = ProductManager
+module.exports = ProductManager
